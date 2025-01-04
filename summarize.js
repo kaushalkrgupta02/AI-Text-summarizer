@@ -1,5 +1,10 @@
 const axios = require('axios');
 
+text = "I have never watched this film before, and its name always seemed unattractive to me. However, I did change my mind afterward as Citizen Kane impressed me a lot and made me contemplate some things in life. One aspect that was gripping to me was the transition from one scene...";
+
+console.log("ACCESS_TOKEN", process.env['ACCESS_TOKEN']);  
+console.log("text: ", text);
+
 async function summarizeText(text) {
 
    
@@ -10,6 +15,7 @@ async function summarizeText(text) {
        "min_length": 30
      }
    });
+   
 
    let config = {
      method: 'post',
@@ -30,13 +36,10 @@ async function summarizeText(text) {
      catch (error) {
        console.log(error);
      }
-   
-
-//makeRequest();
 
 
  }
 
- 
+ makeRequest();
 
  module.exports = summarizeText;
