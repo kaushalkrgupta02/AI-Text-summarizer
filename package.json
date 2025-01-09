@@ -1,7 +1,7 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "This web app provides concise summaries of long texts such as articles, research papers, etc.\r Powered by Hugging Face API and Node.Js Tech Stack and project is under the Project Based Learning course Postman Academy.\r It contains an input text box with a 20000-word limit and antoher output textbox which will throw the output i.e summarize text proccesed by Hugging FAce API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +12,11 @@
   "dependencies": {
     "@types/node": "^18.0.6",
     "axios": "^1.4.0",
-    "body-parser": "^1.20.2",
+    "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
-    "express": "^4.18.2",
+    "express": "^4.21.2",
     "node-fetch": "^3.2.6",
     "openai": "^4.77.3"
-  }
+  },
+  "devDependencies": {}
 }

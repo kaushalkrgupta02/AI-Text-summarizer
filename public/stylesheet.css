@@ -193,37 +193,33 @@ h2 {
  
 }
 
-
-.typewriter p {
-  color: #030303;
-  font-size: 25px;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; 
-  width: 0;
-  /* animation: 
-    typing 5s steps(20,end); */
-
+.typewriter-container {
+  width: 100%; /* Full-width container */
+  overflow: hidden; /* Hide text outside the visible area */
+  white-space: nowrap; /* Prevent line breaks */
+  position: relative; /* For relative positioning of children */
+  height: 35px; /* Adjust to fit the text height */
 }
 
 .typewriter {
-  text-align: center;
-  display: inline-block;
-
+  display: inline-block; /* Keeps all text on one line */
+  animation: scroll 40s linear infinite; /* Scroll animation */
 }
 
-.center {
-  text-align: center;
+.typewriter p {
+  display: inline; /* Sentences appear on one line */
+  margin-right: 250px; /* Space between sentences */
+  font-family: Georgia;
+  font-size: 18px;
 }
 
-   
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+@keyframes scroll {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  to {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
 }
 
 header h1{
