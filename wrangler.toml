@@ -1,0 +1,5 @@
+name = "ai-text-summarizer"
+main = "index.js"
+node_compat = true 
+pages_build_output_dir = "./public"
+# compatibility_date = "2025-01-10"
